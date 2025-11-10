@@ -5,8 +5,11 @@
 package Models;
 
 /**
- *
- * @author lisan
+ * Representa a una persona registrada en el sistema del hotel.
+ * Contiene datos personales utilizados para realizar reservas.
+ * 
+ * @author Lisandro
+ * @version 1.0
  */
 public class Persona {
     
@@ -20,6 +23,15 @@ public class Persona {
 
     private String telefono;
     
+    /**
+     * Crea una persona con todos sus atributos.
+     *
+     * @param id Identificador único de la persona.
+     * @param nombre Nombre completo de la persona.
+     * @param email Dirección de correo electrónico.
+     * @param telefono Teléfono de contacto.
+     * @param dni Documento Nacional de Identidad.
+     */
     public Persona(int id, String dni, String nombre, String email, String telefono){
         this.id = id;
         this.dni = dni;
@@ -28,6 +40,9 @@ public class Persona {
         this.telefono = telefono;
     }
     
+    /**
+     * Crea una persona sin datos iniciales.
+     */
     public Persona(){}
 
     public int getId() {
@@ -38,34 +53,42 @@ public class Persona {
         this.id = id;
     }
 
+    /** @return número de documento. */
     public String getDni() {
         return dni;
     }
 
+    /** @param dni nuevo número de documento. */
     public void setDni(String dni) {
         this.dni = dni;
     }
     
+    /** @return nombre completo de la persona. */
     public String getNombre() {
         return nombre;
     }
 
+    /** @param nombre nuevo nombre completo. */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
     
+    /** @return dirección de correo electrónico. */
     public String getEmail() {
         return email;
     }
 
+    /** @param email nueva dirección de correo. */
     public void setEmail(String email) {
         this.email = email;
     }
     
+    /** @return teléfono de contacto. */
     public String getTelefono() {
     return telefono;
     }
 
+    /** @param telefono nuevo número telefónico. */
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
